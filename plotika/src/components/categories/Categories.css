@@ -1,0 +1,19 @@
+.categories{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;                      /*si  se agregan elementos y no caben se van acomodando abajo*/
+}
+
+ .categories a {
+ color: #9b9b9b9b;
+ margin: 20px 20px;
+ font-size: 18px;
+ font-weight: 700;
+ text-decoration: none;
+
+
+}
+
+ .categories a.active{
+    color: rgb(77, 1, 26);
+}
