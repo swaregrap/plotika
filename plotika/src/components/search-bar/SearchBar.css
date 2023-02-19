@@ -1,20 +1,20 @@
-*{
+* {
     margin: 0;
-    padding:0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 
-form{
+form {
     width: 100%;
     display: flex;
     justify-content: center;
-   
- 
-  }
 
 
-  .search-bar{
+}
+
+
+.search-bar {
     width: 70%;
     height: 40px;
     background: #d8d6d6;
@@ -23,5 +23,5 @@ form{
     border: none;
     text-align: center;
     font-size: 20px;
-    
+
 }
