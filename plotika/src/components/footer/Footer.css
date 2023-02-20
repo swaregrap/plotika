@@ -1,0 +1,29 @@
+footer {
+    background-color: rgb(77, 1, 26);
+    padding: 60px 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+    box-shadow: 10px 10px 10px 10px rgb(209, 209, 209);
+
+}
+.container-footer {
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #000000;
+
+}
+
+
+.last-title {
+    text-align: center;
+    font-size: 16px;
+    margin: 20px 0 0 0;
+    color: #939797;
+}
+
+.last-title:hover {
+    color: rgb(0, 0, 0);
+}
