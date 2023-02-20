@@ -1,84 +1,55 @@
-import React from 'react'
-import './ProductSection.css'
-import Superheroes1 from '../../images/diseños/Superheroes1.jpg'
-import Superheroes2 from '../../images/diseños/Superheroes2.jpg'
-import Superheroes3 from '../../images/diseños/Superheroes3.jpg'
-import Superheroes4 from '../../images/diseños/Superheroes4.jpg'
-import Superheroes5 from '../../images/diseños/Superheroes5.jpg'
-import Superheroes6 from '../../images/diseños/Superheroes6.jpg'
-import Superheroes7 from '../../images/diseños/Superheroes7.jpg'
-import Superheroes8 from '../../images/diseños/Superheroes8.jpg'
-import Superheroes9 from '../../images/diseños/Superheroes9.jpg'
-
+import React, { useState } from "react";
+import "./ProductSection.css";
+import "./ProductContainer";
+import ProductContainer from "./ProductContainer";
+const productImages = require.context("../../images/diseños", true);
 
 const ProductSection = () => {
+  const [products, setproducts] = useState([
+    {
+      id: 1,
+      img: productImages(`./Superheroes1.jpg`),
+    },
+    {
+      id: 2,
+      img: productImages(`./Superheroes2.jpg`),
+    },
+    {
+      id: 3,
+      img: productImages(`./Superheroes3.jpg`),
+    },
+    {
+      id: 4,
+      img: productImages(`./Superheroes4.jpg`),
+    },
+    {
+      id: 5,
+      img: productImages(`./Superheroes5.jpg`),
+    },
+    {
+      id: 6,
+      img: productImages(`./Superheroes6.jpg`),
+    },
+
+    {
+      id: 7,
+      img: productImages(`./Superheroes7.jpg`),
+    },
+    {
+      id: 8,
+      img: productImages(`./Superheroes8.jpg`),
+    },
+  ]);
+
   return (
     <>
       <div className="product-container">
-        <div className="individual-product">
-          <img src={Superheroes1} alt="/" />
-        </div>
-
-        <div className="individual-product">
-          <img src={Superheroes2} alt="/" />
-        </div>
-
-        <div className="individual-product">
-          <img src={Superheroes3} alt="/" />
-        </div>
-
-        <div className="individual-product">
-          <img src={Superheroes4} alt="/" />
-        </div>
-
-        <div className="individual-product">
-          <img src={Superheroes5} alt="/" />
-        </div>
-
-        <div className="individual-product">
-          <img src={Superheroes6} alt="/" />
-        </div>
-        <div className="individual-product">
-          <img src={Superheroes7} alt="/" />
-        </div>
-
-        <div className="individual-product">
-          <img src={Superheroes8} alt="/" />
-        </div>
-
-        <div className="individual-product">
-          <img src={Superheroes9} alt="/" />
-        </div>
-        
-        <div className="individual-product">
-          <img src={Superheroes3} alt="/" />
-        </div>
-
-        <div className="individual-product">
-          <img src={Superheroes3} alt="/" />
-        </div>
-        
-        <div className="individual-product">
-          <img src={Superheroes3} alt="/" />
-        </div>
-
-        <div className="individual-product">
-          <img src={Superheroes3} alt="/" />
-        </div>
-
-        <div className="individual-product">
-          <img src={Superheroes3} alt="/" />
-        </div>
-
-        <div className="individual-product">
-          <img src={Superheroes3} alt="/" />
-        </div>
-
+        {products.map((products) => {
+          return <ProductContainer key={products.id} img={products.img} />;
+        })}
       </div>
-
-      
     </>
   );
-}
+};
 
 export default ProductSection;
